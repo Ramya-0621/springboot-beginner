@@ -1,44 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Card</title>
-
-    <link rel="stylesheet" href="card.css">
+    <title>Toggle</title>
+    <link rel="stylesheet" href="css/site.css">
 </head>
-
 <body>
 
-    <div class="navbar">
+<div class="navbar">
+    <a href="/index.html">Home</a>
+    <a href="/card.html">Card</a>
+    <a href="/toggle.html">Toggle</a>
+</div>
 
-        <a href="index.html">Home</a>
-        <a href="card.html">Card</a>
-        <a href="toggle.html">Toggle</a>
-        <a href="">Contact</a>
+<div class="card">
 
-    </div>
+    <img id="userImage"
+         src="https://www.w3schools.com/HOWTO/img_avatar.png"
+         width="150">
 
-    <div class="card">
-    
-        <img 
-        id="userImage"
-        src="https://www.w3schools.com/howto/img_avatar.png" 
-        alt="User">
+    <h3 id="userName">Joe</h3>
+    <h4 id="userGender">Male</h4>
 
-        <div class="container">
+    <button onclick="toggleUser()">Toggle</button>
 
-            <h2 id="userName">Joe</h2>
+</div>
 
-            <p id="userGender">Male</p>
-
-            <button onclick="toggleCard()">Toggle</button>
-
-        </div>
-
-    </div>
-
-    <script src="toggle.js"></script>
+<script src="js/toggle.js"></script>
 
 </body>
 </html>
