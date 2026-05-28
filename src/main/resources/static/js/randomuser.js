@@ -1,7 +1,12 @@
 function displayUser(user) {
-    document.querySelector("img").src = user.img;
-    document.querySelector("h3").textContent = user.name;
-    document.querySelectorAll("h3")[1].textContent = user.gender;
+    // 1. Target by ID for the image
+    document.getElementById("user-img").src = user.img;
+    
+    // 2. Target the <h4> using its specific ID
+    document.getElementById("user-name").textContent = user.name;
+    
+    // 3. Target the <h5> using its specific ID
+    document.getElementById("user-gender").textContent = user.gender;
 }
 
 function getAndDisplayRandomUser() {
@@ -11,16 +16,12 @@ function getAndDisplayRandomUser() {
        })
        .then(function(data) {
            var user = data.results[0];
-           
-           // 1. Create the object
            var userObj = {};
            
-           // 2. FIXED: Use userObj consistently here
            userObj.name = user.name.first + " " + user.name.last;
            userObj.gender = user.gender;
            userObj.img = user.picture.large;
            
-           // 3. Pass it to your display function
            displayUser(userObj);
        })
        .catch(function(err) {
