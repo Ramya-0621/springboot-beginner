@@ -12,7 +12,6 @@ function toggleUser() {
     // 2. Call the display function to actually update the screen
     displayUser(nextuser);
 }
-
 function displayUser(user) {
     document.querySelector("img").src = user.img;
     document.querySelector("h3").textContent = user.name;
